@@ -5,8 +5,6 @@ import { SiGithub, SiTwitter } from 'react-icons/si';
 import { InView } from 'react-intersection-observer';
 
 import { trackEvent } from '@/lib/analytics';
-import { getAllFilesFrontmatter, getFeatured } from '@/lib/mdx.server';
-import { generateRss } from '@/lib/rss';
 import useLoaded from '@/hooks/useLoaded';
 
 import Accent from '@/components/Accent';
@@ -347,28 +345,11 @@ export default function IndexPage() {
                         'left-1/2 -translate-x-1/2 md:translate-x-[-50%] lg:translate-x-[-30%]',
                         'rotate-3 md:rotate-6 lg:rotate-12',
                         'pointer-events-none md:pointer-events-auto',
-                        'list-image-[url(/favicon/lr-357x357.png)]'
+                        'list-image-[url(/favicon/hua-310x310.png)]'
                       )}
                     ></li>
-                    <li className='mx-auto max-w-[0px] list-image-[url(/favicon/lr-357x357.png)] pt-96'></li>
+                    <li className='mx-auto max-w-[0px] list-image-[url(/favicon/hua-310x310.png)] pt-96'></li>
                   </ul>
-
-                  {/*<ul className='relative h-full'>*/}
-                  {/*  <BlogCard*/}
-                  {/*    className={clsx(*/}
-                  {/*      'absolute max-w-[350px] transform-gpu',*/}
-                  {/*      'top-1/2 translate-y-[-55%] md:translate-y-[-50%] lg:translate-y-[-60%]',*/}
-                  {/*      'left-1/2 -translate-x-1/2 md:translate-x-[-50%] lg:translate-x-[-30%]',*/}
-                  {/*      'rotate-3 md:rotate-6 lg:rotate-12',*/}
-                  {/*      'pointer-events-none md:pointer-events-auto'*/}
-                  {/*    )}*/}
-                  {/*    post={populatedIntro[1]}*/}
-                  {/*  />*/}
-                  {/*  <BlogCard*/}
-                  {/*    className='mx-auto max-w-[350px]'*/}
-                  {/*    post={populatedIntro[0]}*/}
-                  {/*  />*/}
-                  {/*</ul>*/}
                 </div>
               </article>
             </section>
@@ -485,46 +466,46 @@ export default function IndexPage() {
   );
 }
 
-export async function getStaticProps() {
-  generateRss();
-
-  const blogs = await getAllFilesFrontmatter('blog');
-  const projects = await getAllFilesFrontmatter('projects');
-  const shorts = await getAllFilesFrontmatter('library');
-
-  const featuredPosts = getFeatured(blogs, [
-    'fully-reusable-components',
-    'react-hydration',
-    'react-core-concept-rendering-state',
-    'nextjs-auth-hoc',
-    'nextjs-boilerplate-2023',
-    'nextjs-fetch-method',
-  ]);
-  const featuredProjects = getFeatured(projects, [
-    'hexcape',
-    'notiolink',
-    'ppdbsumsel',
-  ]);
-  const featuredShorts = getFeatured(shorts, [
-    'react/absolute-import',
-    'auth-context',
-    'mac/zsh',
-    'react/jsx-one-parent',
-    'styling/margin-usage',
-    'uncategorized/search-removal',
-  ]);
-
-  const introPosts = getFeatured(blogs, [
-    'btb-flex-mental-model',
-    'nextjs-fetch-method',
-  ]);
-
-  return {
-    props: {
-      featuredPosts,
-      featuredProjects,
-      featuredShorts,
-      introPosts,
-    },
-  };
-}
+// export async function getStaticProps() {
+//     generateRss();
+//
+//     const blogs = await getAllFilesFrontmatter('blog');
+//     const projects = await getAllFilesFrontmatter('projects');
+//     const shorts = await getAllFilesFrontmatter('library');
+//
+//     const featuredPosts = getFeatured(blogs, [
+//         'fully-reusable-components',
+//         'react-hydration',
+//         'react-core-concept-rendering-state',
+//         'nextjs-auth-hoc',
+//         'nextjs-boilerplate-2023',
+//         'nextjs-fetch-method',
+//     ]);
+//     const featuredProjects = getFeatured(projects, [
+//         'hexcape',
+//         'notiolink',
+//         'ppdbsumsel',
+//     ]);
+//     const featuredShorts = getFeatured(shorts, [
+//         'react/absolute-import',
+//         'auth-context',
+//         'mac/zsh',
+//         'react/jsx-one-parent',
+//         'styling/margin-usage',
+//         'uncategorized/search-removal',
+//     ]);
+//
+//     const introPosts = getFeatured(blogs, [
+//         'btb-flex-mental-model',
+//         'nextjs-fetch-method',
+//     ]);
+//
+//     return {
+//         props: {
+//             featuredPosts,
+//             featuredProjects,
+//             featuredShorts,
+//             introPosts,
+//         },
+//     };
+// }
