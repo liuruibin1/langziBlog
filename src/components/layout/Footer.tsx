@@ -2,7 +2,7 @@ import { FeedbackFish } from '@feedback-fish/react';
 import * as React from 'react';
 import { FiMail } from 'react-icons/fi';
 import { IconType } from 'react-icons/lib';
-import { SiGithub, SiLinkedin, SiTwitter } from 'react-icons/si';
+import { SiGithub, SiTwitter } from 'react-icons/si';
 
 import { trackEvent } from '@/lib/analytics';
 import useCopyToClipboard from '@/hooks/useCopyToClipboard';
@@ -92,7 +92,7 @@ function SocialLinks() {
         >
           <button
             onClick={() => {
-              copy('me@theodorusclarence.com').then(() => {
+              copy('langzibingxiu@gmail.com').then(() => {
                 setCopyStatus('copied');
                 setTimeout(() => setCopyStatus('idle'), 1500);
               });
@@ -127,7 +127,7 @@ function SocialLinks() {
 const footerLinks: { href: string; text: string; tooltip: React.ReactNode }[] =
   [
     {
-      href: 'https://github.com/theodorusclarence/theodorusclarence.com',
+      href: 'https://github.com/liuruibin1',
       text: 'Source Code',
       tooltip: (
         <>
@@ -146,12 +146,12 @@ const footerLinks: { href: string; text: string; tooltip: React.ReactNode }[] =
       tooltip: 'Personal documentation about my best practices on development',
     },
     {
-      href: 'https://clarence.link/booknotes',
+      href: 'https://www.notion.so/8ec8d1cdec874e9ba86fe993f258bfe5?v=8041d6df31e849fb8bda5d2ae48d63ba&pvs=4',
       text: 'Book Notes',
       tooltip: 'Note collection of books that I read',
     },
     {
-      href: 'https://clarence.link/starters',
+      href: 'https://github.com/liuruibin1',
       text: 'Starter Templates',
       tooltip: 'Starter that I build and use throughout my projects',
     },
@@ -176,11 +176,11 @@ const footerLinks: { href: string; text: string; tooltip: React.ReactNode }[] =
       text: 'Subscribe',
       tooltip: 'Get an email whenever I post, no spam',
     },
-    {
-      href: 'https://theodorusclarence.com/rss.xml',
-      text: 'RSS',
-      tooltip: 'Add theodorusclarence.com blog to your feeds',
-    },
+    // {
+    //   href: 'https://theodorusclarence.com/rss.xml',
+    //   text: 'RSS',
+    //   tooltip: 'Add theodorusclarence.com blog to your feeds',
+    // },
   ];
 
 type Social = {
@@ -200,18 +200,18 @@ const socials: Social[] = [
       </>
     ),
   },
+  // {
+  //   href: 'https://clarence.link/linkedin',
+  //   icon: SiLinkedin,
+  //   id: 'Linkedin',
+  //   text: (
+  //     <>
+  //       Find me on <Accent className='font-medium'>Linkedin</Accent>
+  //     </>
+  //   ),
+  // },
   {
-    href: 'https://clarence.link/linkedin',
-    icon: SiLinkedin,
-    id: 'Linkedin',
-    text: (
-      <>
-        Find me on <Accent className='font-medium'>Linkedin</Accent>
-      </>
-    ),
-  },
-  {
-    href: 'https://clarence.link/twt',
+    href: 'https://twitter.com/LLiuruibin',
     icon: SiTwitter,
     id: 'Twitter',
     text: (

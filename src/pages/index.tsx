@@ -1,40 +1,32 @@
 import clsx from 'clsx';
-import { InferGetStaticPropsType } from 'next';
 import * as React from 'react';
 import { IoArrowDownOutline } from 'react-icons/io5';
-import { IoNewspaperSharp } from 'react-icons/io5';
 import { SiGithub, SiTwitter } from 'react-icons/si';
 import { InView } from 'react-intersection-observer';
 
 import { trackEvent } from '@/lib/analytics';
 import { getAllFilesFrontmatter, getFeatured } from '@/lib/mdx.server';
 import { generateRss } from '@/lib/rss';
-import useInjectContentMeta from '@/hooks/useInjectContentMeta';
 import useLoaded from '@/hooks/useLoaded';
 
 import Accent from '@/components/Accent';
-import BlogCard from '@/components/content/blog/BlogCard';
-import ShortsCard from '@/components/content/card/ShortsCard';
-import ProjectCard from '@/components/content/projects/ProjectCard';
 import Layout from '@/components/layout/Layout';
 import ButtonLink from '@/components/links/ButtonLink';
-import CustomLink from '@/components/links/CustomLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
 import TC from '@/components/TC';
-import Tooltip from '@/components/Tooltip';
 
-export default function IndexPage({
-  featuredPosts,
-  featuredProjects,
-  featuredShorts,
-  introPosts,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
-  const populatedPosts = useInjectContentMeta('blog', featuredPosts);
-  const populatedIntro = useInjectContentMeta('blog', introPosts);
-  const populatedProjects = useInjectContentMeta('projects', featuredProjects);
-  const populatedShorts = useInjectContentMeta('library', featuredShorts);
-
+// export default function IndexPage({
+//                                       featuredPosts,
+//                                       featuredProjects,
+//                                       featuredShorts,
+//                                       introPosts,
+//                                   }: InferGetStaticPropsType<typeof getStaticProps>) {
+//     const populatedPosts = useInjectContentMeta('blog', featuredPosts);
+//     const populatedIntro = useInjectContentMeta('blog', introPosts);
+//     const populatedProjects = useInjectContentMeta('projects', featuredProjects);
+//     const populatedShorts = useInjectContentMeta('library', featuredShorts);
+export default function IndexPage() {
   const isLoaded = useLoaded();
 
   return (
@@ -53,8 +45,8 @@ export default function IndexPage({
               你好!
             </h2>
             <h1
-                className='mt-1 text-3xl md:text-5xl 2xl:text-6xl'
-                data-fade='2'
+              className='mt-1 text-3xl md:text-5xl 2xl:text-6xl'
+              data-fade='2'
             >
               你可以叫我 <Accent>老刘</Accent>
             </h1>
@@ -71,8 +63,8 @@ export default function IndexPage({
               className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
               data-fade='4'
             >
-              如果想要联系我，可以通过telegram飞机联系我！
-              telegram: QGxvYWZlcl9s (base64)
+              如果想要联系我，可以通过telegram飞机联系我！ telegram:
+              QGxvYWZlcl9s (base64)
               {/*<CustomLink href='/guestbook'>guestbook</CustomLink>!*/}
             </p>
             <div
@@ -88,7 +80,7 @@ export default function IndexPage({
                     'opacity-75 transition duration-1000 group-hover:opacity-100 group-hover:duration-200'
                   )}
                 />
-                <ButtonLink href='#intro'>阅读博客</ButtonLink>
+                <ButtonLink href='#intro'>工作技能</ButtonLink>
               </div>
               <ButtonLink href='/about'>关于我</ButtonLink>
             </div>
@@ -198,95 +190,169 @@ export default function IndexPage({
                     {/*  <span>Mental model</span>*/}
                     {/*</Tooltip>{' '}*/}
                     <p
-                        className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
-                        data-fade='4'
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
                     >
-                    本人比较熟悉eth公链，bnb公链，以及apt公链，对lp质押以及swap都有过深入了解，V2swap兑换等。
-                      </p>
+                      本人比较熟悉eth公链，bnb公链，以及apt公链，对lp质押以及swap都有过深入了解，V2swap兑换等。
+                    </p>
                     <h3 className='text-green-200xl md:text-green-300xl'>
                       <Accent className='inline decoration-clone leading-snug dark:leading-none'>
                         solidity技术
                       </Accent>
                     </h3>{' '}
                     <p
-                        className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
-                        data-fade='4'
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
                     >
-                    有专门研究过uniswap和pancakeswap的源码，知道如何实现添加移除流动池，以及对兑换代币有过进一步了解。
+                      1、熟练掌握 Solidity
+                      编程语言，了解合约的结构、函数、变量声明等基本语法。
+                      <br />
+                      2、了解 Solidity 中的数据类型、控制结构、函数修饰符等。
+                      <br />
+                      3、能够编写智能合约，包括 ERC-20、ERC-721 等标准合约。
+                      <br />
+                      4、了解智能合约的生命周期、部署、调用等。
+                      <br />
+                      5、了解以太坊区块链网络的基本原理和运作机制。
+                      <br />
+                      6、知道如何连接以太坊网络，选择合适的节点服务。
+                      <br />
+                      7、掌握 Web3.js 或 Ethers.js 等以太坊 JavaScript
+                      库，以便与以太坊区块链进行交互。
+                      <br />
+                      8、能够通过库调用合约函数，查询状态和发送交易。
+                      <br />
+                      9、熟悉 Hardhat 等 Solidity
+                      开发框架，用于合约的编译、测试和部署。
+                      <br />
+                      10、了解智能合约的安全性问题，避免常见的漏洞，如重入攻击、溢出等。
+                      <br />
+                      11、使用工具进行代码审计，确保合约的安全性。
+                      <br />
+                      12、优化智能合约的 gas 消耗，提高合约的执行效率。
+                      <br />
+                      13、了解 gas 价格和 gas 上限的概念。
+                      <br />
                     </p>
-                    <p
-                        className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
-                        data-fade='4'
-                    >
-                      了解并熟练使用openzeppelin提供的库包括了一些标准合约的实现，例如 ERC-20 和 ERC-721 代币，同时还提供了一些注重安全性的合约，以帮助开发人员构建安全的智能合约。
-                      {/*<CustomLink href='/guestbook'>guestbook</CustomLink>!*/}
-                    </p>
-                    {/*by seeing how they work{' '}*/}
-                    {/*<strong className='text-gray-700 dark:text-gray-200'>*/}
-                    {/*  fundamentally*/}
-                    {/*</strong>*/}
-
                     <h3 className='text-green-200xl md:text-green-300xl'>
                       <Accent className='inline decoration-clone leading-snug dark:leading-none'>
                         java技术
                       </Accent>
                     </h3>{' '}
                     <p
-                        className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
-                        data-fade='4'
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
                     >
-                      一开始做的是erp项目，了解了从客户到订单到财务的流程开发，这种项目国内大多都是基于平台化开发，这时候需要学会如何使用封装过的jquery技术去应对一些
-                      前端的按钮控制和一些提示控制，以及使用ajax去调用接口。<br/>
-                      后端则是spring全家桶开发，涉及到springboot+springcloud进行微服务开发，nacos作为注册中心，打包则由jenkins完成。此间有进行表的设计，比如客户表有客户信息表，而客户又存在潜在客户和正式客户
-                      则需要使用到子表分开存储两者不同的信息。<br/>
+                      1、熟练使用spring全家桶进行开发
+                      <br />
+                      2、对 Java
+                      语言的深入理解，包括面向对象编程（OOP）、多线程编程、异常处理等。
+                      <br />
+                      3、掌握 Java EE（Enterprise Edition）和 Spring
+                      Framework规范。
+                      <br />
+                      4、熟悉常见的 Web 开发概念，包括 HTTP 协议、RESTful
+                      架构等。
+                      <br />
+                      5、对现代的前端框架（如 React、Angular 或
+                      Vue.js）有基本了解。
+                      <br />
+                      6、了解和实践微服务架构，包括服务发现、容器化（Docker）、容器编排（Kubernetes）等
+                      <br />
+                      7、了解消息队列的概念和使用，熟悉 RabbitMQ、Apache Kafka
+                      ，实践消息驱动的开发，理解异步消息处理。
+                      <br />
+                      8、熟悉常见的安全漏洞和防范措施，包括跨站脚本（XSS）、跨站请求伪造（CSRF）等。
+                      <br />
+                      9、实施身份验证和授权，了解 OAuth 和 JWT。
+                      <br />
+                      10、熟悉版本控制工具，如 Git。
+                      <br />
+                      11、了解云服务提供商（如 AWS、Azure、Google
+                      Cloud）的基本服务和部署流程。
+                      <br />
+                      12、了解 Docker 容器化技术和 Kubernetes 编排系统。
+                      <br />
                     </p>
+                    <h3 className='text-green-200xl md:text-green-300xl'>
+                      <Accent className='inline decoration-clone leading-snug dark:leading-none'>
+                        mysql，postgresql，oracle技术
+                      </Accent>
+                    </h3>{' '}
                     <p
-                        className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
-                        data-fade='4'
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
                     >
-                      也有做过医院的项目，使用的是spring中Hibernate去开发，没用到xml配置这块，基本由Hibernate提供的query去查询以及操作。
-                      具体业务技术在关于我里面会写详细。
-                      {/*<CustomLink href='/guestbook'>guestbook</CustomLink>!*/}
-                    </p>
-                    <p
-                        className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
-                        data-fade='4'
-                    >
-                      我最喜欢做的当然还是金融业务，也就是web3这一块，一开始做的是nft，当初入行是一点都不懂，一点一点摸清楚eth链上操作以及钱包是什么，然后也有充值一些币，
-                      去研究交易所以及链上是如何运转的。
-                      了解怎么抓取链上的数据，以及java如何调用合约，当然我比较熟悉的还是充值提现这一块。
-                      如何调用合约的我自己写了demo，源码可以自取
-                      {/*<CustomLink href='/guestbook'>guestbook</CustomLink>!*/}
+                      1、熟练掌握 SQL（Structured Query
+                      Language），包括对数据的增、删、改、查等基本操作。
+                      <br />
+                      2、了解复杂查询、连接、子查询等高级 SQL 操作。
+                      <br />
+                      3、能够设计规范的数据库模型，包括表的设计、关系建立、索引的使用等。
+                      <br />
+                      4、了解范式化和反范式化的概念。
+                      <br />
+                      5、了解索引的类型（如 B
+                      树索引、哈希索引）及其在数据库查询性能优化中的作用。
+                      <br />
+                      6、能够选择合适的字段创建索引，避免滥用索引
+                      <br />
+                      7、理解数据库事务的概念，掌握事务的 ACID 特性。
+                      <br />
+                      8、能够正确使用事务，确保数据的一致性和完整性。
+                      <br />
+                      9、使用数据库性能分析工具，定位和解决慢查询、性能瓶颈等问题。
+                      <br />
+                      10、优化查询语句，避免全表扫描，提高查询效率。
+                      <br />
+                      11、避免 SQL 注入等安全威胁。
+                      <br />
+                      12、熟悉主从复制、读写分离等技术。
+                      <br />
                     </p>
                     <UnstyledLink
-                        href='https://github.com/liuruibin1/web3PanckSwap'
-                        className={clsx(
-                            'inline-flex items-center gap-1 text-sm font-medium md:text-base',
-                            'text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
-                            'focus:outline-none focus-visible:ring focus-visible:ring-primary-300',
-                            'transition-colors'
-                        )}
-                        onClick={() => {
-                          trackEvent('Social Link: Github', { type: 'link' });
-                        }}
+                      href='https://github.com/liuruibin1/web3PanckSwap'
+                      className={clsx(
+                        'inline-flex items-center gap-1 text-sm font-medium md:text-base',
+                        'text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
+                        'focus:outline-none focus-visible:ring focus-visible:ring-primary-300',
+                        'transition-colors'
+                      )}
+                      onClick={() => {
+                        trackEvent('Social Link: Github', { type: 'link' });
+                      }}
                     >
                       <SiGithub className='shrink-0' />
                       <span>github源码</span>
                     </UnstyledLink>
                   </div>
                 </div>
-                <div className='h-full w-full flex justify-end'>
-                  <ul className="relative h-full">
-                    <li className={clsx(
+                <div className='flex h-full w-full justify-end'>
+                  <ul className='relative h-full'>
+                    <li
+                      className={clsx(
                         'absolute max-w-[0px] transform-gpu',
                         'top-1/2 translate-y-[-55%] md:translate-y-[-50%] lg:translate-y-[-60%]',
                         'left-1/2 -translate-x-1/2 md:translate-x-[-50%] lg:translate-x-[-30%]',
                         'rotate-3 md:rotate-6 lg:rotate-12',
                         'pointer-events-none md:pointer-events-auto',
                         'list-image-[url(/favicon/lr-357x357.png)]'
-                    )}></li>
+                      )}
+                    ></li>
                     <li className='mx-auto max-w-[0px] list-image-[url(/favicon/lr-357x357.png)]'></li>
+                    <li
+                      className={clsx(
+                        'absolute max-w-[0px] transform-gpu pt-96',
+                        'top-1/2 translate-y-[-55%] md:translate-y-[-50%] lg:translate-y-[-60%]',
+                        'left-1/2 -translate-x-1/2 md:translate-x-[-50%] lg:translate-x-[-30%]',
+                        'rotate-3 md:rotate-6 lg:rotate-12',
+                        'pointer-events-none md:pointer-events-auto',
+                        'list-image-[url(/favicon/lr-357x357.png)]'
+                      )}
+                    ></li>
+                    <li className='mx-auto max-w-[0px] list-image-[url(/favicon/lr-357x357.png)] pt-96'></li>
                   </ul>
+
                   {/*<ul className='relative h-full'>*/}
                   {/*  <BlogCard*/}
                   {/*    className={clsx(*/}
@@ -309,111 +375,111 @@ export default function IndexPage({
           )}
         </InView>
 
-        <InView triggerOnce rootMargin='-40% 0px'>
-          {({ ref, inView }) => (
-            <section
-              ref={ref}
-              className={clsx('py-20', inView && 'fade-in-start')}
-            >
-              <article className='layout' data-fade='0'>
-                <h2 className='text-2xl md:text-4xl' id='blog'>
-                  <Accent>Featured Posts</Accent>
-                </h2>
-                <ul className='mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>
-                  {populatedPosts.map((post, i) => (
-                    <BlogCard
-                      key={post.slug}
-                      post={post}
-                      className={clsx(i > 2 && 'hidden sm:block')}
-                    />
-                  ))}
-                </ul>
-                <ButtonLink
-                  className='mt-4'
-                  href='/blog'
-                  onClick={() =>
-                    trackEvent('Home: See more post', { type: 'navigate' })
-                  }
-                >
-                  See more post
-                </ButtonLink>
-              </article>
-            </section>
-          )}
-        </InView>
+        {/*<InView triggerOnce rootMargin='-40% 0px'>*/}
+        {/*  {({ ref, inView }) => (*/}
+        {/*    <section*/}
+        {/*      ref={ref}*/}
+        {/*      className={clsx('py-20', inView && 'fade-in-start')}*/}
+        {/*    >*/}
+        {/*      <article className='layout' data-fade='0'>*/}
+        {/*        <h2 className='text-2xl md:text-4xl' id='blog'>*/}
+        {/*          <Accent>Featured Posts</Accent>*/}
+        {/*        </h2>*/}
+        {/*        <ul className='mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>*/}
+        {/*          {populatedPosts.map((post, i) => (*/}
+        {/*            <BlogCard*/}
+        {/*              key={post.slug}*/}
+        {/*              post={post}*/}
+        {/*              className={clsx(i > 2 && 'hidden sm:block')}*/}
+        {/*            />*/}
+        {/*          ))}*/}
+        {/*        </ul>*/}
+        {/*        <ButtonLink*/}
+        {/*          className='mt-4'*/}
+        {/*          href='/blog'*/}
+        {/*          onClick={() =>*/}
+        {/*            trackEvent('Home: See more post', { type: 'navigate' })*/}
+        {/*          }*/}
+        {/*        >*/}
+        {/*          See more post*/}
+        {/*        </ButtonLink>*/}
+        {/*      </article>*/}
+        {/*    </section>*/}
+        {/*  )}*/}
+        {/*</InView>*/}
 
-        <InView triggerOnce rootMargin='-40% 0px'>
-          {({ ref, inView }) => (
-            <section
-              ref={ref}
-              className={clsx('py-20', inView && 'fade-in-start')}
-            >
-              <article className='layout' data-fade='0'>
-                <h2 className='text-2xl md:text-4xl' id='projects'>
-                  <Accent>Featured Projects</Accent>
-                </h2>
-                <p className='mt-2 text-gray-600 dark:text-gray-300'>
-                  Some projects that I'm proud of
-                </p>
-                <ul className='mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>
-                  {populatedProjects.map((project, i) => (
-                    <ProjectCard
-                      key={project.slug}
-                      project={project}
-                      className={clsx(i > 2 && 'hidden sm:block')}
-                    />
-                  ))}
-                </ul>
-                <ButtonLink
-                  className='mt-4'
-                  href='/projects'
-                  onClick={() =>
-                    trackEvent('Home: See more project', { type: 'navigate' })
-                  }
-                >
-                  See more project
-                </ButtonLink>
-              </article>
-            </section>
-          )}
-        </InView>
+        {/*<InView triggerOnce rootMargin='-40% 0px'>*/}
+        {/*  {({ ref, inView }) => (*/}
+        {/*    <section*/}
+        {/*      ref={ref}*/}
+        {/*      className={clsx('py-20', inView && 'fade-in-start')}*/}
+        {/*    >*/}
+        {/*      <article className='layout' data-fade='0'>*/}
+        {/*        <h2 className='text-2xl md:text-4xl' id='projects'>*/}
+        {/*          <Accent>Featured Projects</Accent>*/}
+        {/*        </h2>*/}
+        {/*        <p className='mt-2 text-gray-600 dark:text-gray-300'>*/}
+        {/*          Some projects that I'm proud of*/}
+        {/*        </p>*/}
+        {/*        <ul className='mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>*/}
+        {/*          {populatedProjects.map((project, i) => (*/}
+        {/*            <ProjectCard*/}
+        {/*              key={project.slug}*/}
+        {/*              project={project}*/}
+        {/*              className={clsx(i > 2 && 'hidden sm:block')}*/}
+        {/*            />*/}
+        {/*          ))}*/}
+        {/*        </ul>*/}
+        {/*        <ButtonLink*/}
+        {/*          className='mt-4'*/}
+        {/*          href='/projects'*/}
+        {/*          onClick={() =>*/}
+        {/*            trackEvent('Home: See more project', { type: 'navigate' })*/}
+        {/*          }*/}
+        {/*        >*/}
+        {/*          See more project*/}
+        {/*        </ButtonLink>*/}
+        {/*      </article>*/}
+        {/*    </section>*/}
+        {/*  )}*/}
+        {/*</InView>*/}
 
-        <InView triggerOnce rootMargin='-40% 0px'>
-          {({ ref, inView }) => (
-            <section
-              ref={ref}
-              className={clsx('py-20', inView && 'fade-in-start')}
-            >
-              <article className='layout' data-fade='0'>
-                <h2 className='text-2xl md:text-4xl' id='library'>
-                  <Accent>Shorts</Accent>
-                </h2>
-                <p className='mt-2 text-gray-600 dark:text-gray-300'>
-                  Short article that's not long enough to be a blog post,
-                  usually comes from my personal notes.
-                </p>
-                <ul className='mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>
-                  {populatedShorts.map((short, i) => (
-                    <ShortsCard
-                      key={short.slug}
-                      short={short}
-                      className={clsx(i > 2 && 'hidden sm:block')}
-                    />
-                  ))}
-                </ul>
-                <ButtonLink
-                  className='mt-4'
-                  href='/shorts'
-                  onClick={() =>
-                    trackEvent('Home: See more shorts', { type: 'navigate' })
-                  }
-                >
-                  See more shorts
-                </ButtonLink>
-              </article>
-            </section>
-          )}
-        </InView>
+        {/*<InView triggerOnce rootMargin='-40% 0px'>*/}
+        {/*  {({ ref, inView }) => (*/}
+        {/*    <section*/}
+        {/*      ref={ref}*/}
+        {/*      className={clsx('py-20', inView && 'fade-in-start')}*/}
+        {/*    >*/}
+        {/*      <article className='layout' data-fade='0'>*/}
+        {/*        <h2 className='text-2xl md:text-4xl' id='library'>*/}
+        {/*          <Accent>Shorts</Accent>*/}
+        {/*        </h2>*/}
+        {/*        <p className='mt-2 text-gray-600 dark:text-gray-300'>*/}
+        {/*          Short article that's not long enough to be a blog post,*/}
+        {/*          usually comes from my personal notes.*/}
+        {/*        </p>*/}
+        {/*        <ul className='mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>*/}
+        {/*          {populatedShorts.map((short, i) => (*/}
+        {/*            <ShortsCard*/}
+        {/*              key={short.slug}*/}
+        {/*              short={short}*/}
+        {/*              className={clsx(i > 2 && 'hidden sm:block')}*/}
+        {/*            />*/}
+        {/*          ))}*/}
+        {/*        </ul>*/}
+        {/*        <ButtonLink*/}
+        {/*          className='mt-4'*/}
+        {/*          href='/shorts'*/}
+        {/*          onClick={() =>*/}
+        {/*            trackEvent('Home: See more shorts', { type: 'navigate' })*/}
+        {/*          }*/}
+        {/*        >*/}
+        {/*          See more shorts*/}
+        {/*        </ButtonLink>*/}
+        {/*      </article>*/}
+        {/*    </section>*/}
+        {/*  )}*/}
+        {/*</InView>*/}
       </main>
     </Layout>
   );

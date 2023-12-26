@@ -1,11 +1,13 @@
 import clsx from 'clsx';
 import * as React from 'react';
+import { BiLogoPostgresql } from 'react-icons/bi';
+import { FaHardHat, FaJava, FaUbuntu } from 'react-icons/fa';
+import { GrGraphQl } from 'react-icons/gr';
 import {
-  SiNextdotjs,
+  SiMysql,
   SiPrisma,
   SiReact,
-  SiReactquery,
-  SiTailwindcss,
+  SiSolidity,
   SiTypescript,
 } from 'react-icons/si';
 
@@ -33,13 +35,98 @@ export default function TechStack() {
 
 const stacks = [
   {
-    id: 'nextjs',
-    icon: SiNextdotjs,
+    id: 'java',
+    icon: FaJava,
     tooltip: (
       <>
-        <CustomLink href='https://nextjs.org'>Next.js</CustomLink>, currently my
-        go-to framework because of the static generation, dynamic paths, and
-        built-in API. <em>ps: I like pages folder better than the new one.</em>
+        <CustomLink href='https://spring.io/'>java Spring</CustomLink>,
+        可独立开发后台管理以及后端的开发及其部署。
+      </>
+    ),
+  },
+  {
+    id: 'solidity',
+    icon: SiSolidity,
+    tooltip: (
+      <>
+        <CustomLink href='https://soliditylang.org/'>solidity</CustomLink>,
+        主要用于编写与链上交互的合约。
+      </>
+    ),
+  },
+  {
+    id: 'mysql',
+    icon: SiMysql,
+    tooltip: (
+      <>
+        <CustomLink href='https://www.mysql.com/'>mysql</CustomLink>
+        用于数据库管理，存储数据。
+        {/*, can't live without it! Check out my{' '}*/}
+        {/*<CustomLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>*/}
+        {/*  starter template*/}
+        {/*</CustomLink>{' '}*/}
+        {/*using Next.js, Tailwind CSS, and TypeScript.*/}
+      </>
+    ),
+  },
+  {
+    id: 'postgresql',
+    icon: BiLogoPostgresql,
+    tooltip: (
+      <>
+        <CustomLink href='https://www.mysql.com/'>postgresql</CustomLink>
+        用于数据库管理，存储数据。数据类型比mysql丰富，而且是开源的项目，性能扩展各方面都优于mysql。
+        {/*, can't live without it! Check out my{' '}*/}
+        {/*<CustomLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>*/}
+        {/*  starter template*/}
+        {/*</CustomLink>{' '}*/}
+        {/*using Next.js, Tailwind CSS, and TypeScript.*/}
+      </>
+    ),
+  },
+  {
+    id: 'graphql',
+    icon: GrGraphQl,
+    tooltip: (
+      <>
+        <CustomLink href='https://graphql.org/'>graphql</CustomLink>{' '}
+        是一种轻量级非常方便查询的api
+        {/*awesome, I have never achieved this much reusability. Make sure you get*/}
+        {/*the{' '}*/}
+        {/*<CustomLink href='https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss'>*/}
+        {/*  extension*/}
+        {/*</CustomLink>*/}
+        {/*.*/}
+      </>
+    ),
+  },
+  {
+    id: 'ubuntu',
+    icon: FaUbuntu,
+    tooltip: (
+      <>
+        <CustomLink href='https://ubuntu.com/'>ubuntu</CustomLink>,
+        服务器管理，用于部署项目在线上。
+      </>
+    ),
+  },
+  {
+    id: 'prisma',
+    icon: SiPrisma,
+    tooltip: (
+      <>
+        <CustomLink href='https://www.prisma.io/'>Prisma</CustomLink>,
+        一个简单的orm，与graphql配合使用，可以直接忽略java写接口。
+      </>
+    ),
+  },
+  {
+    id: 'hardhat',
+    icon: FaHardHat,
+    tooltip: (
+      <>
+        <CustomLink href='https://hardhat.org/'>hardhat</CustomLink>,
+        用来部署合约和验证合约，以及测试合约，全套流程，很好用。
       </>
     ),
   },
@@ -48,8 +135,8 @@ const stacks = [
     icon: SiReact,
     tooltip: (
       <>
-        <CustomLink href='https://reactjs.org/'>React</CustomLink>, underlying
-        library of Next.js. I love the declarative approach and the ecosystem.
+        <CustomLink href='https://reactjs.org/'>React</CustomLink>,
+        只会一点点，写页面不太会，正在努力研究中。
       </>
     ),
   },
@@ -61,47 +148,7 @@ const stacks = [
         <CustomLink href='https://www.typescriptlang.org/'>
           TypeScript
         </CustomLink>
-        , can't live without it! Check out my{' '}
-        <CustomLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
-          starter template
-        </CustomLink>{' '}
-        using Next.js, Tailwind CSS, and TypeScript.
-      </>
-    ),
-  },
-  {
-    id: 'tailwind',
-    icon: SiTailwindcss,
-    tooltip: (
-      <>
-        <CustomLink href='https://tailwindcss.com/'>Tailwind CSS</CustomLink> is
-        awesome, I have never achieved this much reusability. Make sure you get
-        the{' '}
-        <CustomLink href='https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss'>
-          extension
-        </CustomLink>
-        .
-      </>
-    ),
-  },
-  {
-    id: 'react-query',
-    icon: SiReactquery,
-    tooltip: (
-      <>
-        <CustomLink href='https://tanstack.com/'>TanStack Query</CustomLink>,
-        great react hooks for data fetching and caching. I maintain most of my
-        API fetch (get, post, put, delete) in this library.
-      </>
-    ),
-  },
-  {
-    id: 'prisma',
-    icon: SiPrisma,
-    tooltip: (
-      <>
-        <CustomLink href='https://www.prisma.io/'>Prisma</CustomLink>, great and
-        simple ORM. A little bit of documentation and you're good to go.
+        会一点点。
       </>
     ),
   },

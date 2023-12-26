@@ -99,8 +99,13 @@ export default function Header({ large = false }: HeaderProps) {
 
 const links = [
   { href: '/', label: '主页' },
-  { href: '/blog', label: '博客' },
-  { href: '/projects', label: '项目' },
-  { href: '/shorts', label: '短文' },
   { href: '/about', label: '关于我' },
 ];
+
+// const links = [
+//   { href: '/', label: '主页' },
+//   { href: '/blog', label: '博客' },
+//   { href: '/projects', label: '项目' },
+//   { href: '/shorts', label: '短文' },
+//   { href: '/about', label: '关于我' },
+// ];
