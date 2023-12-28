@@ -11,6 +11,7 @@ type OpenGraphType = {
   isBlog?: boolean;
   tags?: string;
 };
+
 export function openGraph({
   siteName,
   templateTitle,

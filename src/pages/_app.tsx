@@ -1,10 +1,11 @@
 import axios from 'axios';
 import { AppProps } from 'next/app';
-import Router from 'next/router';
+import Router, { useRouter } from 'next/router';
 import { useRemoteRefresh } from 'next-remote-refresh/hook';
 import { ThemeProvider } from 'next-themes';
 import nProgress from 'nprogress';
 import * as React from 'react';
+import { IntlProvider } from 'react-intl';
 import { SWRConfig } from 'swr';
 
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
@@ -17,6 +18,9 @@ import '@/styles/nprogress.css';
 import { getFromLocalStorage } from '@/lib/helper.client';
 
 import { blockDomainMeta } from '@/constants/env';
+
+import en from '../locales/en.json';
+import zhCN from '../locales/zh-CN.json';
 
 Router.events.on('routeChangeStart', nProgress.start);
 Router.events.on('routeChangeError', nProgress.done);
@@ -41,16 +45,28 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   useRemoteRefresh();
 
+  const messages = {
+    en: en,
+    'zh-CN': zhCN,
+  };
+
+  const { locale } = useRouter();
+
   return (
-    <ThemeProvider attribute='class' defaultTheme='dark' enableSystem={false}>
-      <SWRConfig
-        value={{
-          fetcher: (url) => axios.get(url).then((res) => res.data),
-        }}
-      >
-        <Component {...pageProps} />
-      </SWRConfig>
-    </ThemeProvider>
+    <IntlProvider
+      locale={locale || 'defaultLocale'}
+      messages={messages[locale || 'defaultLocale']}
+    >
+      <ThemeProvider attribute='class' defaultTheme='dark' enableSystem={false}>
+        <SWRConfig
+          value={{
+            fetcher: (url) => axios.get(url).then((res) => res.data),
+          }}
+        >
+          <Component {...pageProps} />
+        </SWRConfig>
+      </ThemeProvider>
+    </IntlProvider>
   );
 }
 

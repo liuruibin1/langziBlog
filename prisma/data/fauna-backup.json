@@ -1136,7 +1136,9 @@
     "slug": "l_rhf-input",
     "views": 2,
     "likes": 3,
-    "likesByUser": { "b2d585819becc679ae67713447babcea": 2 }
+    "likesByUser": {
+      "b2d585819becc679ae67713447babcea": 2
+    }
   },
   {
     "slug": "l_cloudinary-blur-loader",
@@ -1301,7 +1303,9 @@
     "slug": "l_swr-fetcher",
     "views": 52,
     "likes": 2,
-    "likesByUser": { "a73c895dcb3c24990f085b1361c530f5": 1 }
+    "likesByUser": {
+      "a73c895dcb3c24990f085b1361c530f5": 1
+    }
   },
   {
     "slug": "l_youtube-embed",

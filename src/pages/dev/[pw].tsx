@@ -10,6 +10,7 @@ import Seo from '@/components/Seo';
 
 export default function UmamiPage() {
   const [, setRerender] = React.useState(false);
+
   function forceRerender() {
     setRerender((t) => !t);
   }

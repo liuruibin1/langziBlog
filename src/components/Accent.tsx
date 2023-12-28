@@ -10,7 +10,7 @@ export default function Accent({ children, className }: AccentType) {
         className,
         'transition-colors',
         'bg-gradient-to-tr from-primary-300/40 via-primary-300/40 to-primary-400/40',
-        'dark:from-primary-500 dark:to-primary-600 dark:bg-clip-text dark:text-transparent'
+        'dark:to-primary-600 dark:from-primary-500 dark:bg-clip-text dark:text-transparent'
       )}
     >
       {children}

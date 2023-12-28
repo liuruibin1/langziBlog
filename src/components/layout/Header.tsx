@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import * as React from 'react';
+import { useIntl } from 'react-intl';
 
 import Accent from '@/components/Accent';
 import ThemeButton from '@/components/buttons/ThemeButton';
@@ -30,6 +31,12 @@ export default function Header({ large = false }: HeaderProps) {
     };
   }, []);
   //#endregion  //*======== Scroll Shadow ===========
+
+  const intl = useIntl();
+  const links = [
+    { href: '/', label: intl.formatMessage({ id: 'page.index.home' }) },
+    { href: '/about', label: intl.formatMessage({ id: 'page.index.about' }) },
+  ];
 
   return (
     <header
@@ -81,7 +88,8 @@ export default function Header({ large = false }: HeaderProps) {
                       'transition-colors',
                       'bg-primary-300/0 group-hover:bg-primary-300/20 dark:group-hover:bg-primary-300/0',
                       href === baseRoute &&
-                        '!bg-primary-300/50 dark:bg-gradient-to-tr dark:from-primary-300 dark:to-primary-400 dark:bg-clip-text dark:text-transparent'
+                        '!bg-primary-300/50 dark:bg-gradient-to-tr dark:from-primary-300 dark:to-primary-400 dark:bg-clip-text dark:text-transparent',
+                      'text-2xl'
                     )}
                   >
                     {label}
@@ -96,11 +104,6 @@ export default function Header({ large = false }: HeaderProps) {
     </header>
   );
 }
-
-const links = [
-  { href: '/', label: '主页' },
-  { href: '/about', label: '关于我' },
-];
 
 // const links = [
 //   { href: '/', label: '主页' },

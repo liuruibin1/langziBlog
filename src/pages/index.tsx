@@ -3,6 +3,7 @@ import * as React from 'react';
 import { IoArrowDownOutline } from 'react-icons/io5';
 import { SiGithub, SiTwitter } from 'react-icons/si';
 import { InView } from 'react-intersection-observer';
+import { useIntl } from 'react-intl';
 
 import { trackEvent } from '@/lib/analytics';
 import useLoaded from '@/hooks/useLoaded';
@@ -26,6 +27,7 @@ import TC from '@/components/TC';
 //     const populatedShorts = useInjectContentMeta('library', featuredShorts);
 export default function IndexPage() {
   const isLoaded = useLoaded();
+  const intl = useIntl();
 
   return (
     <Layout>
@@ -40,14 +42,21 @@ export default function IndexPage() {
         >
           <article className='layout'>
             <h2 className='text-2xl md:text-4xl 2xl:text-5xl' data-fade='1'>
-              你好!
+              {intl.formatMessage({ id: 'page.index.hi' })}
             </h2>
-            <h1
-              className='mt-1 text-3xl md:text-5xl 2xl:text-6xl'
+            {/*<h1*/}
+            {/*  className='mt-1 text-3xl md:text-5xl 2xl:text-6xl'*/}
+            {/*  data-fade='2'*/}
+            {/*>*/}
+            {/*  你可以叫我 <Accent>老刘</Accent>*/}
+            {/*</h1>*/}
+            <h4
+              className='mt-1 text-3xl md:text-3xl 2xl:text-4xl'
               data-fade='2'
             >
-              你可以叫我 <Accent>老刘</Accent>
-            </h1>
+              {intl.formatMessage({ id: 'page.index.one' })}
+              <Accent>{intl.formatMessage({ id: 'page.index.name' })}</Accent>
+            </h4>
             <p
               className={clsx(
                 'mt-4 max-w-4xl text-gray-700 dark:text-gray-200 md:mt-6',
@@ -55,13 +64,13 @@ export default function IndexPage() {
               )}
               data-fade='3'
             >
-              本人从事java后端和web3合约开发，是一个有比较多想法，热爱分享和热爱学习新技术的人！
+              {intl.formatMessage({ id: 'page.index.two' })}
             </p>
             <p
               className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
               data-fade='4'
             >
-              如果想要联系我，可以通过telegram飞机联系我！ telegram:
+              {intl.formatMessage({ id: 'page.index.three' })} telegram:
               QGxvYWZlcl9s (base64)
               {/*<CustomLink href='/guestbook'>guestbook</CustomLink>!*/}
             </p>
@@ -78,9 +87,13 @@ export default function IndexPage() {
                     'opacity-75 transition duration-1000 group-hover:opacity-100 group-hover:duration-200'
                   )}
                 />
-                <ButtonLink href='#intro'>工作技能</ButtonLink>
+                <ButtonLink href='#intro'>
+                  {intl.formatMessage({ id: 'page.index.four' })}
+                </ButtonLink>
               </div>
-              <ButtonLink href='/about'>关于我</ButtonLink>
+              <ButtonLink href='/about'>
+                {intl.formatMessage({ id: 'page.index.about' })}
+              </ButtonLink>
             </div>
             <div
               data-fade='6'
@@ -170,7 +183,7 @@ export default function IndexPage() {
                 <div className='mt-8 h-full w-full md:mt-0'>
                   <h2 className='text-4xl md:text-6xl'>
                     <Accent className='inline decoration-clone leading-snug dark:leading-none'>
-                      工作技能
+                      {intl.formatMessage({ id: 'page.index.four' })}
                     </Accent>
                   </h2>
                   <div className='mt-4 text-base text-gray-600 dark:text-gray-300 md:text-lg'>
@@ -191,121 +204,114 @@ export default function IndexPage() {
                       className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
                       data-fade='4'
                     >
-                      本人比较熟悉eth公链，bnb公链，以及apt公链，对lp质押以及swap都有过深入了解，V2swap兑换等。
+                      {intl.formatMessage({ id: 'page.index.five' })}
                     </p>
                     <h3 className='text-green-200xl md:text-green-300xl'>
                       <Accent className='inline decoration-clone leading-snug dark:leading-none'>
-                        solidity技术
+                        solidity{' '}
+                        {intl.formatMessage({ id: 'page.index.skill' })}
                       </Accent>
                     </h3>{' '}
                     <p
                       className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
                       data-fade='4'
                     >
-                      1、熟练掌握 Solidity
-                      编程语言，了解合约的结构、函数、变量声明等基本语法。
+                      {intl.formatMessage({ id: 'page.index.solidity.one' })}
                       <br />
-                      2、了解 Solidity 中的数据类型、控制结构、函数修饰符等。
+                      {intl.formatMessage({ id: 'page.index.solidity.two' })}
                       <br />
-                      3、能够编写智能合约，包括 ERC-20、ERC-721 等标准合约。
+                      {intl.formatMessage({ id: 'page.index.solidity.three' })}
                       <br />
-                      4、了解智能合约的生命周期、部署、调用等。
+                      {intl.formatMessage({ id: 'page.index.solidity.four' })}
                       <br />
-                      5、了解以太坊区块链网络的基本原理和运作机制。
+                      {intl.formatMessage({ id: 'page.index.solidity.five' })}
                       <br />
-                      6、知道如何连接以太坊网络，选择合适的节点服务。
+                      {intl.formatMessage({ id: 'page.index.solidity.six' })}
                       <br />
-                      7、掌握 Web3.js 或 Ethers.js 等以太坊 JavaScript
-                      库，以便与以太坊区块链进行交互。
+                      {intl.formatMessage({ id: 'page.index.solidity.seven' })}
                       <br />
-                      8、能够通过库调用合约函数，查询状态和发送交易。
+                      {intl.formatMessage({ id: 'page.index.solidity.eight' })}
                       <br />
-                      9、熟悉 Hardhat 等 Solidity
-                      开发框架，用于合约的编译、测试和部署。
+                      {intl.formatMessage({ id: 'page.index.solidity.nine' })}
                       <br />
-                      10、了解智能合约的安全性问题，避免常见的漏洞，如重入攻击、溢出等。
+                      {intl.formatMessage({ id: 'page.index.solidity.ten' })}
                       <br />
-                      11、使用工具进行代码审计，确保合约的安全性。
+                      {intl.formatMessage({ id: 'page.index.solidity.eleven' })}
                       <br />
-                      12、优化智能合约的 gas 消耗，提高合约的执行效率。
+                      {intl.formatMessage({ id: 'page.index.solidity.twelve' })}
                       <br />
-                      13、了解 gas 价格和 gas 上限的概念。
+                      {intl.formatMessage({
+                        id: 'page.index.solidity.thirteen',
+                      })}
                       <br />
                     </p>
                     <h3 className='text-green-200xl md:text-green-300xl'>
                       <Accent className='inline decoration-clone leading-snug dark:leading-none'>
-                        java技术
+                        java {intl.formatMessage({ id: 'page.index.skill' })}
                       </Accent>
                     </h3>{' '}
                     <p
                       className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
                       data-fade='4'
                     >
-                      1、熟练使用spring全家桶进行开发
+                      {intl.formatMessage({ id: 'page.index.java.one' })}
                       <br />
-                      2、对 Java
-                      语言的深入理解，包括面向对象编程（OOP）、多线程编程、异常处理等。
+                      {intl.formatMessage({ id: 'page.index.java.two' })}
                       <br />
-                      3、掌握 Java EE（Enterprise Edition）和 Spring
-                      Framework规范。
+                      {intl.formatMessage({ id: 'page.index.java.three' })}
                       <br />
-                      4、熟悉常见的 Web 开发概念，包括 HTTP 协议、RESTful
-                      架构等。
+                      {intl.formatMessage({ id: 'page.index.java.four' })}
                       <br />
-                      5、对现代的前端框架（如 React、Angular 或
-                      Vue.js）有基本了解。
+                      {intl.formatMessage({ id: 'page.index.java.five' })}
                       <br />
-                      6、了解和实践微服务架构，包括服务发现、容器化（Docker）、容器编排（Kubernetes）等
+                      {intl.formatMessage({ id: 'page.index.java.six' })}
                       <br />
-                      7、了解消息队列的概念和使用，熟悉 RabbitMQ、Apache Kafka
-                      ，实践消息驱动的开发，理解异步消息处理。
+                      {intl.formatMessage({ id: 'page.index.java.seven' })}
                       <br />
-                      8、熟悉常见的安全漏洞和防范措施，包括跨站脚本（XSS）、跨站请求伪造（CSRF）等。
+                      {intl.formatMessage({ id: 'page.index.java.eight' })}
                       <br />
-                      9、实施身份验证和授权，了解 OAuth 和 JWT。
+                      {intl.formatMessage({ id: 'page.index.java.nine' })}
                       <br />
-                      10、熟悉版本控制工具，如 Git。
+                      {intl.formatMessage({ id: 'page.index.java.ten' })}
                       <br />
-                      11、了解云服务提供商（如 AWS、Azure、Google
-                      Cloud）的基本服务和部署流程。
+                      {intl.formatMessage({ id: 'page.index.java.eleven' })}
                       <br />
-                      12、了解 Docker 容器化技术和 Kubernetes 编排系统。
+                      {intl.formatMessage({ id: 'page.index.java.twelve' })}
                       <br />
                     </p>
                     <h3 className='text-green-200xl md:text-green-300xl'>
                       <Accent className='inline decoration-clone leading-snug dark:leading-none'>
-                        mysql，postgresql，oracle技术
+                        mysql，postgresql，oracle{' '}
+                        {intl.formatMessage({ id: 'page.index.skill' })}
                       </Accent>
                     </h3>{' '}
                     <p
                       className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
                       data-fade='4'
                     >
-                      1、熟练掌握 SQL（Structured Query
-                      Language），包括对数据的增、删、改、查等基本操作。
+                      {intl.formatMessage({ id: 'page.index.sql.one' })}
                       <br />
-                      2、了解复杂查询、连接、子查询等高级 SQL 操作。
+                      {intl.formatMessage({ id: 'page.index.sql.two' })}
                       <br />
-                      3、能够设计规范的数据库模型，包括表的设计、关系建立、索引的使用等。
+                      {intl.formatMessage({ id: 'page.index.sql.three' })}
                       <br />
-                      4、了解范式化和反范式化的概念。
+                      {intl.formatMessage({ id: 'page.index.sql.four' })}
                       <br />
-                      5、了解索引的类型（如 B
-                      树索引、哈希索引）及其在数据库查询性能优化中的作用。
+                      {intl.formatMessage({ id: 'page.index.sql.five' })}
                       <br />
-                      6、能够选择合适的字段创建索引，避免滥用索引
+                      {intl.formatMessage({ id: 'page.index.sql.six' })}
                       <br />
-                      7、理解数据库事务的概念，掌握事务的 ACID 特性。
+                      {intl.formatMessage({ id: 'page.index.sql.seven' })}
                       <br />
-                      8、能够正确使用事务，确保数据的一致性和完整性。
+                      {intl.formatMessage({ id: 'page.index.sql.eight' })}
                       <br />
-                      9、使用数据库性能分析工具，定位和解决慢查询、性能瓶颈等问题。
+                      {intl.formatMessage({ id: 'page.index.sql.nine' })}
                       <br />
-                      10、优化查询语句，避免全表扫描，提高查询效率。
+                      {intl.formatMessage({ id: 'page.index.sql.ten' })}
                       <br />
-                      11、避免 SQL 注入等安全威胁。
+                      {intl.formatMessage({ id: 'page.index.sql.eleven' })}
                       <br />
-                      12、熟悉主从复制、读写分离等技术。
+                      {intl.formatMessage({ id: 'page.index.sql.twelve' })}
                       <br />
                     </p>
                     <UnstyledLink
@@ -321,7 +327,9 @@ export default function IndexPage() {
                       }}
                     >
                       <SiGithub className='shrink-0' />
-                      <span>github源码</span>
+                      <span>
+                        github {intl.formatMessage({ id: 'page.index.source' })}
+                      </span>
                     </UnstyledLink>
                   </div>
                 </div>
