@@ -14,7 +14,7 @@ describe('All Page', () => {
 
     it('should display about page', () => {
         cy.visit('/about');
-        cy.get('h1').should('contain', 'Theodorus Clarence');
+        cy.get('h1').should('contain', 'robin.mobi');
     });
 
     it('should display blog page', () => {
@@ -34,7 +34,7 @@ describe('All Page', () => {
 
     it('should display subscribe page', () => {
         cy.visit('/subscribe');
-        cy.get('h1').should('contain', 'Subscribe to theodorusclarence.com');
+        cy.get('h1').should('contain', 'Subscribe to robin.mobi');
     });
 
     it('should display trf bca page', () => {

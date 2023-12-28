@@ -22,7 +22,7 @@ export default function CarbonAds({ className }: { className?: string }) {
 
     const script = document.createElement('script');
     script.src =
-      'https://cdn.carbonads.com/carbon.js?serve=CWYDE23M&placement=theodorusclarencecom';
+      'https://cdn.carbonads.com/carbon.js?serve=CWYDE23M&placement=robin.mobi';
     script.id = '_carbonads_js';
     script.async = true;
 
