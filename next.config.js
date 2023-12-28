@@ -8,6 +8,9 @@ const withRemoteRefresh = require('next-remote-refresh')({
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
+  experimental: {
+    outputStandalone: true,
+  },
   eslint: {
     dirs: ['src'],
   },
