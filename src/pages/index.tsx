@@ -217,33 +217,80 @@ export default function IndexPage() {
                       data-fade='4'
                     >
                       {intl.formatMessage({ id: 'page.index.solidity.one' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.solidity.two' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.solidity.three' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.solidity.four' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.solidity.five' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.solidity.six' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.solidity.seven' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.solidity.eight' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.solidity.nine' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.solidity.ten' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.solidity.eleven' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.solidity.twelve' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({
                         id: 'page.index.solidity.thirteen',
                       })}
-                      <br />
                     </p>
                     <h3 className='text-green-200xl md:text-green-300xl'>
                       <Accent className='inline decoration-clone leading-snug dark:leading-none'>
@@ -255,29 +302,72 @@ export default function IndexPage() {
                       data-fade='4'
                     >
                       {intl.formatMessage({ id: 'page.index.java.one' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.java.two' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.java.three' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.java.four' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.java.five' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.java.six' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.java.seven' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.java.eight' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.java.nine' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.java.ten' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.java.eleven' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.java.twelve' })}
-                      <br />
                     </p>
                     <h3 className='text-green-200xl md:text-green-300xl'>
                       <Accent className='inline decoration-clone leading-snug dark:leading-none'>
@@ -290,29 +380,72 @@ export default function IndexPage() {
                       data-fade='4'
                     >
                       {intl.formatMessage({ id: 'page.index.sql.one' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.sql.two' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.sql.three' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.sql.four' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.sql.five' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.sql.six' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.sql.seven' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.sql.eight' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.sql.nine' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.sql.ten' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.sql.eleven' })}
-                      <br />
+                    </p>
+                    <p
+                      className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                      data-fade='4'
+                    >
                       {intl.formatMessage({ id: 'page.index.sql.twelve' })}
-                      <br />
                     </p>
                     <UnstyledLink
                       href='https://github.com/liuruibin1/web3PanckSwap'
