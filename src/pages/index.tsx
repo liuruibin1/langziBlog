@@ -15,16 +15,6 @@ import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
 import TC from '@/components/TC';
 
-// export default function IndexPage({
-//                                       featuredPosts,
-//                                       featuredProjects,
-//                                       featuredShorts,
-//                                       introPosts,
-//                                   }: InferGetStaticPropsType<typeof getStaticProps>) {
-//     const populatedPosts = useInjectContentMeta('blog', featuredPosts);
-//     const populatedIntro = useInjectContentMeta('blog', introPosts);
-//     const populatedProjects = useInjectContentMeta('projects', featuredProjects);
-//     const populatedShorts = useInjectContentMeta('library', featuredShorts);
 export default function IndexPage() {
   const isLoaded = useLoaded();
   const intl = useIntl();
@@ -468,28 +458,30 @@ export default function IndexPage() {
                 </div>
                 <div className='flex h-full w-full justify-end'>
                   <ul className='relative h-full'>
-                    <li
-                      className={clsx(
-                        'absolute max-w-[0px] transform-gpu',
-                        'top-1/2 translate-y-[-55%] md:translate-y-[-50%] lg:translate-y-[-60%]',
-                        'left-1/2 -translate-x-1/2 md:translate-x-[-50%] lg:translate-x-[-30%]',
-                        'rotate-3 md:rotate-6 lg:rotate-12',
-                        'pointer-events-none md:pointer-events-auto',
-                        'list-image-[url(/favicon/lr-357x357.png)]'
-                      )}
-                    ></li>
-                    <li className='mx-auto max-w-[0px] list-image-[url(/favicon/lr-357x357.png)]'></li>
-                    <li
-                      className={clsx(
-                        'absolute max-w-[0px] transform-gpu pt-96',
-                        'top-1/2 translate-y-[-55%] md:translate-y-[-50%] lg:translate-y-[-60%]',
-                        'left-1/2 -translate-x-1/2 md:translate-x-[-50%] lg:translate-x-[-30%]',
-                        'rotate-3 md:rotate-6 lg:rotate-12',
-                        'pointer-events-none md:pointer-events-auto',
-                        'list-image-[url(/favicon/hua-310x310.png)]'
-                      )}
-                    ></li>
-                    <li className='mx-auto max-w-[0px] list-image-[url(/favicon/hua-310x310.png)] pt-96'></li>
+                    {/*<li*/}
+                    {/*  className={clsx(*/}
+                    {/*    'absolute max-w-[0px] transform-gpu',*/}
+                    {/*    'top-1/2 translate-y-[-55%] md:translate-y-[-50%] lg:translate-y-[-60%]',*/}
+                    {/*    'left-1/2 -translate-x-1/2 md:translate-x-[-50%] lg:translate-x-[-30%]',*/}
+                    {/*    'rotate-3 md:rotate-6 lg:rotate-12',*/}
+                    {/*    'pointer-events-none md:pointer-events-auto',*/}
+                    {/*    'list-image-[url(/favicon/lr-357x357.png)]'*/}
+                    {/*  )}*/}
+                    {/*></li>*/}
+                    <li className='mx-auto max-w-[0px] list-image-[url(/favicon/skill-400x400.png)]'></li>
+                    {/*<li*/}
+                    {/*  className={clsx(*/}
+                    {/*    'absolute max-w-[0px] transform-gpu pt-96',*/}
+                    {/*    'top-1/2 translate-y-[-55%] md:translate-y-[-50%] lg:translate-y-[-60%]',*/}
+                    {/*    'left-1/2 -translate-x-1/2 md:translate-x-[-50%] lg:translate-x-[-30%]',*/}
+                    {/*    'rotate-3 md:rotate-6 lg:rotate-12',*/}
+                    {/*    'pointer-events-none md:pointer-events-auto',*/}
+                    {/*    'list-image-[url(/favicon/skill-400x400-1.png)]'*/}
+                    {/*  )}*/}
+                    {/*></li>*/}
+                    <li className='mx-auto max-w-[0px] list-image-[url(/favicon/skill-400x400-1.png)] pt-96'></li>
+                    <li className='mx-auto max-w-[0px] list-image-[url(/favicon/skill-400x400-2.png)] pt-96'></li>
+                    <li className='mx-auto max-w-[0px] list-image-[url(/favicon/skill-400x400-3.png)] pt-96'></li>
                   </ul>
                 </div>
               </article>
