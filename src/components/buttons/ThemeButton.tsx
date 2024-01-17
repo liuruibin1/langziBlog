@@ -1,9 +1,10 @@
 import clsx from 'clsx';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
 import * as React from 'react';
 import { FiMoon, FiSun } from 'react-icons/fi';
+
+import LanguageButton from '@/components/buttons/LanguageButton';
 
 type ThemeButtonProps = React.ComponentPropsWithoutRef<'button'>;
 
@@ -39,11 +40,7 @@ export default function ThemeButton({ className, ...rest }: ThemeButtonProps) {
           <FiSun />
         )}
       </button>
-      {[...locales].sort().map((locale) => (
-        <Link key={locale} href='/' locale={locale}>
-          {locale + ' | '}
-        </Link>
-      ))}
+      <LanguageButton locales={locales} />
     </div>
   );
 }

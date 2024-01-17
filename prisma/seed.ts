@@ -1,7 +1,8 @@
 import {PrismaClient} from '@prisma/client';
 
-const prisma = new PrismaClient();
 import faunadata from './data/fauna-backup.json';
+
+const prisma = new PrismaClient();
 
 async function main() {
     const data = faunadata as unknown as FaunaMeta[];

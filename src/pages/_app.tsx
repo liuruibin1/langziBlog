@@ -20,7 +20,7 @@ import { getFromLocalStorage } from '@/lib/helper.client';
 import { blockDomainMeta } from '@/constants/env';
 
 import en from '../locales/en.json';
-import zhCN from '../locales/zh-CN.json';
+import zh from '../locales/zh.json';
 
 Router.events.on('routeChangeStart', nProgress.start);
 Router.events.on('routeChangeError', nProgress.done);
@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const messages = {
     en: en,
-    'zh-CN': zhCN,
+    zh: zh,
   };
 
   const { locale } = useRouter();

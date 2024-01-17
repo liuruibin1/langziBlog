@@ -38,6 +38,13 @@ export default function Header({ large = false }: HeaderProps) {
     { href: '/about', label: intl.formatMessage({ id: 'page.index.about' }) },
   ];
 
+  const { locales } = useRouter();
+
+  if (locales === undefined) {
+    // Handle the case when 'items' is undefined, e.g., return an empty state
+    return <p>No items available.</p>;
+  }
+
   return (
     <header
       className={clsx(

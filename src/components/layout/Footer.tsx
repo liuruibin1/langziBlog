@@ -26,7 +26,7 @@ export default function Footer() {
           Reach me out
         </p>
         <SocialLinks />
-
+        <BeianhaoLinks />
         <p className='mt-8 text-sm text-gray-600 dark:text-gray-300'>
           © Theodorus Clarence {new Date().getFullYear()}
           {feedbackFlag && (
@@ -44,6 +44,26 @@ export default function Footer() {
         </p>
       </main>
     </footer>
+  );
+}
+
+function BeianhaoLinks() {
+  return (
+    <div className='flex flex-wrap justify-center gap-x-8 gap-y-4'>
+      {gongxinbuLinks.map(({ href, text, tooltip }) => (
+        <Tooltip interactive={false} key={href} tipChildren={tooltip}>
+          <UnstyledLink
+            className='animated-underline rounded-sm text-sm font-medium focus:outline-none focus-visible:ring focus-visible:ring-primary-300 dark:text-gray-200'
+            href={href}
+            onClick={() => {
+              trackEvent(`Footer Link: ${text}`, { type: 'link' });
+            }}
+          >
+            {text}
+          </UnstyledLink>
+        </Tooltip>
+      ))}
+    </div>
   );
 }
 
@@ -182,6 +202,18 @@ const footerLinks: { href: string; text: string; tooltip: React.ReactNode }[] =
     //   tooltip: 'Add theodorusclarence.com blog to your feeds',
     // },
   ];
+
+const gongxinbuLinks: {
+  href: string;
+  text: string;
+  tooltip: React.ReactNode;
+}[] = [
+  {
+    href: 'https://beian.miit.gov.cn ',
+    text: '备案号:闽ICP备2024029638号-1',
+    tooltip: '工信部备案号',
+  },
+];
 
 type Social = {
   href: string;

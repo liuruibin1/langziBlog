@@ -1,7 +1,7 @@
 const path = require('path');
 
 const withRemoteRefresh = require('next-remote-refresh')({
-    paths: [path.resolve(__dirname, 'src', 'contents')],
+    paths: [path.resolve(__dirname, 'src', 'contents')]
 });
 
 /**
@@ -9,53 +9,53 @@ const withRemoteRefresh = require('next-remote-refresh')({
  */
 const nextConfig = {
     experimental: {
-        outputStandalone: true,
+        outputStandalone: true
     },
     i18n: {
-        locales: ['en', 'zh-CN'],
-        defaultLocale: 'en',
+        locales: ['en', 'zh'],
+        defaultLocale: 'en'
     },
     domains: [
         {
 
             domain: 'www.robin.mobi',
-            defaultLocale: 'en',
+            defaultLocale: 'en'
         },
         {
             domain: 'robin.mobi',
-            defaultLocale: 'zh-CN',
-        },
+            defaultLocale: 'zh'
+        }
     ],
     eslint: {
-        dirs: ['src'],
+        dirs: ['src']
     },
     images: {
         domains: [
             'res.cloudinary.com',
 
             // Spotify Album
-            'i.scdn.co',
-        ],
+            'i.scdn.co'
+        ]
     },
     async redirects() {
         return [
             {
                 source: '/library/absolute-import',
                 destination: '/shorts/react/absolute-import',
-                permanent: true,
+                permanent: true
             },
             {
                 source: '/library',
                 destination: '/shorts',
-                permanent: true,
+                permanent: true
             },
             {
                 source: '/library/:slug',
                 destination: '/shorts/:slug',
-                permanent: true,
-            },
+                permanent: true
+            }
         ];
-    },
+    }
 };
 
 module.exports = withRemoteRefresh(nextConfig);
