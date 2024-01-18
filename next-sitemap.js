@@ -1,5 +1,5 @@
 module.exports = {
-    siteUrl: 'https://theodorusclarence.com/',
+    siteUrl: 'http://robin.mobi.com/',
     generateRobotsTxt: true,
     robotsTxtOptions: {
         policies: [{userAgent: '*', allow: '/'}],
